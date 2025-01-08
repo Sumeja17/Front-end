@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    
+    <script>
+        document.getElementById("p1").innerHTML = 
+        "Browser inner window width: " + window.innerWidth + "px<br>" +
+        "Browser inner window height" + window.innerHeight + "px";
+    </script>
+
+    <p id="p2"></p>
+
+    <script>
+        document.getElementById("p2").innerHTML = "Screen width is: " + screen.width;
+    </script>
+    <p id="p3"></p>
+    <script>
+        document.getElementById("p3").innerHTML = "Screen height is: " + screen.height;
+    </script>
+
+    <button onclick="funki()">Provo</button>
+
+    <script>
+        function funki()
+        {
+            //window.opem("admin/index.html"); //internal link
+            window.open("https://www.google.com"); //external link
+        } 
+    </script>
+
+    <button onclick="openW()">Open</button>
+    <button onclick="closeW()">Close</button>
+
+    <script>
+        var x;
+        function openW()
+        {
+            x =window.open("https://www.google.com", "blank", "width=500,height=500");
+        }
+        function closeW() 
+        {
+            x.close();
+        }
+    </script>
+
+    <button onclick="fun()">Konfirm</button>
+
+    <script>
+        function fun() 
+        {
+            confirm("Press a button!");                                                                                               
+        }
+    </script>
+
+    <button onclick="funxhi()">Kliko</button>
+
+    <p id="p5"></p>
+    <script>
+        function funxhi()
+        {
+        var txt;
+        if (confirm("Press a button")){
+            txt = "You pressed OK!";
+            //return = "You pressed OK!"
+         } else {
+                txt = "You pressed Cancel!";
+                //return = "You pressed Cancel!";
+            }
+            document.getElementById("p5").innerHTML = txt;
+        }
+        document.getElementById
+    </script>
+</body>
+</html>
